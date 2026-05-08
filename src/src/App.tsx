@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import "./App.css";
+import "../App.css";
 
 const STORAGE_KEY = "rotina-treinador-simples-v1";
 
