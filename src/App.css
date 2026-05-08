@@ -1,42 +1,186 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #e5e7eb;
+  background: #eef2f7;
+  color: #0f172a;
 }
-
-.container {
-  display: flex;
-  justify-content: center;
-  padding: 40px;
+.page {
+  padding: 28px;
+  max-width: 1300px;
+  margin: auto;
 }
-
-.card {
+.hero,
+.coach,
+.card,
+.week button {
   background: white;
-  padding: 30px;
-  border-radius: 20px;
-  width: 350px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 22px;
+  box-shadow: 0 8px 24px #0001;
 }
-
+.hero {
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.eyebrow {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #64748b;
+  letter-spacing: 2px;
+}
 h1 {
-  margin: 0;
+  font-size: 48px;
+  margin: 5px 0;
+}
+.subtitle {
+  color: #64748b;
+}
+.score {
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
   text-align: center;
 }
-
-p {
-  text-align: center;
-  color: #666;
+.score strong {
+  display: block;
+  font-size: 42px;
 }
-
-.tasks {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 20px;
+.coach {
+  padding: 22px;
+  margin: 20px 0;
+  border-left: 8px solid #0f172a;
 }
-
-label {
-  display: flex;
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
   gap: 10px;
-  font-size: 18px;
+  margin-bottom: 20px;
+}
+.week button {
+  border: 0;
+  padding: 16px;
+  cursor: pointer;
+  text-align: left;
+}
+.week button.active {
+  background: #0f172a;
+  color: white;
+}
+.week span {
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.week strong {
+  font-size: 22px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+}
+.card {
+  padding: 24px;
+  margin-bottom: 20px;
+}
+.card h2 {
+  margin-top: 0;
+  font-size: 26px;
+}
+.list {
+  display: grid;
+  gap: 12px;
+}
+.habit {
+  border: 1px solid #dbe3ee;
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+}
+.habit.checked {
+  background: #0f172a;
+  color: white;
+}
+.habit strong {
+  display: block;
+  font-size: 20px;
+}
+.habit span {
+  color: #64748b;
+}
+.habit.checked span {
+  color: #cbd5e1;
+}
+.habit b {
+  font-size: 32px;
+}
+.side {
+  min-width: 0;
+}
+.water {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+.water button {
+  aspect-ratio: 1;
+  border-radius: 16px;
+  border: 1px solid #cbd5e1;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.water button.filled {
+  background: #0f172a;
+  color: white;
+}
+textarea {
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 14px;
+  font-size: 16px;
+}
+.secondary,
+.danger {
+  width: 100%;
+  margin-top: 12px;
+  border: 0;
+  padding: 14px;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.secondary {
+  background: #e2e8f0;
+}
+.danger {
+  background: #dc2626;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+  .week {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  h1 {
+    font-size: 34px;
+  }
 }
